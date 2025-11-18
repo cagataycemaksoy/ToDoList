@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ToDoList: View {
+  @State private var sheetPresented = false
   private let tasks = ["Do Landry", "Cook dinner", "Go to gym", "Call your friends"]
+  
     var body: some View {
       NavigationStack {
         List {
@@ -23,7 +25,22 @@ struct ToDoList: View {
         }
         .navigationTitle("To-Dos")
         .navigationBarTitleDisplayMode(.automatic)
-        .listStyle(.automatic)
+        .listStyle(.plain)
+        .sheet(isPresented: $sheetPresented) {
+          NavigationStack {
+            TaskDetailView(todoTitle: "")
+          }
+        }
+        .toolbar {
+          ToolbarItem(placement: .topBarTrailing) {
+            Button {
+              sheetPresented.toggle()
+            } label: {
+              Image(systemName: "plus")
+            }
+
+          }
+        }
       }
     }
 }
