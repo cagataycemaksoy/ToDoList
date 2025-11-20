@@ -61,7 +61,13 @@ struct TaskDetailView: View {
         }
         ToolbarItem(placement: .topBarTrailing) {
           Button("Save") {
-            //TODO: Save task
+            taskItem.title = taskTitle
+            taskItem.taskDescription = taskDescripriton
+            taskItem.taskCompleted = taskCompleted
+            taskItem.remindTask = remindTask
+            taskItem.remindingDate = remindingDate
+            modelContext.insert(taskItem)
+            dismiss()
           }
         }
       }
