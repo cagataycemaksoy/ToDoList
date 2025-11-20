@@ -16,7 +16,7 @@ struct ToDoList: View {
         List {
           ForEach(tasks, id: \.self) { task in
             NavigationLink {
-              TaskDetailView(todoTitle: task)
+             // TaskDetailView(todoTitle: task)
             } label: {
               Text(task)
             }
@@ -28,7 +28,7 @@ struct ToDoList: View {
         .listStyle(.plain)
         .sheet(isPresented: $sheetPresented) {
           NavigationStack {
-            TaskDetailView(todoTitle: "")
+           // TaskDetailView(todoTitle: "")
           }
         }
         .toolbar {

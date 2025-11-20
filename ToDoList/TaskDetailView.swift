@@ -6,20 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TaskDetailView: View {
-  @State var todoTitle: String
+  @State var taskItem: Task
+  
+  @State private var taskTitle = ""
   @State private var taskDescripriton = ""
   @State private var taskCompleted = false
   @State private var remindTask = false
   @State private var remindingDate = Calendar.current.date(byAdding: .day, value: 1, to: .now) ?? .now
   
   @Environment(\.dismiss) var dismiss
+  @Environment(\.modelContext) var modelContext
   
     var body: some View {
       Form {
         Section {
-          TextField("Enter task ...", text: $todoTitle)
+          TextField("Enter task ...", text: $taskTitle)
             .font(.headline) //TODO: Font design
             .textFieldStyle(.roundedBorder)
           
@@ -42,6 +46,13 @@ struct TaskDetailView: View {
       .navigationTitle("Task Details")
       .navigationBarTitleDisplayMode(.inline)
       .navigationBarBackButtonHidden()
+      .onAppear {
+        taskTitle = taskItem.title
+        taskDescripriton = taskItem.taskDescription
+        taskCompleted = taskItem.taskCompleted
+        remindTask = taskItem.remindTask
+        remindingDate = taskItem.remindingDate
+      }
       .toolbar {
         ToolbarItem(placement: .topBarLeading) {
           Button("Cancel") {
@@ -59,6 +70,6 @@ struct TaskDetailView: View {
 
 #Preview {
     NavigationStack {
-      TaskDetailView(todoTitle: "")
+      TaskDetailView(taskItem: Task())
     }
 }

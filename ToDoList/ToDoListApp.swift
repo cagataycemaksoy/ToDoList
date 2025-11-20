@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ToDoListApp: App {
@@ -13,5 +14,6 @@ struct ToDoListApp: App {
         WindowGroup {
             ToDoList()
         }
+        .modelContainer(for: Task.self)
     }
 }
