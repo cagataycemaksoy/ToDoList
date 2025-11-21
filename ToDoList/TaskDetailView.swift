@@ -67,6 +67,10 @@ struct TaskDetailView: View {
             taskItem.remindTask = remindTask
             taskItem.remindingDate = remindingDate
             modelContext.insert(taskItem)
+            guard let _ = try? modelContext.save() else {
+              print("Failed to save the data!")
+              return
+            }
             dismiss()
           }
         }
