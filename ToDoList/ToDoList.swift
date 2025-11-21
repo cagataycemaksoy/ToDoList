@@ -18,10 +18,16 @@ struct ToDoList: View {
       NavigationStack {
         List {
           ForEach(tasks) { task in
-            NavigationLink {
-             TaskDetailView(taskItem: task)
-            } label: {
-              Text(task.title)
+            HStack {
+              Image(systemName: task.taskCompleted ? "checkmark.circle.fill" : "circle")
+                .onTapGesture {
+                  task.taskCompleted.toggle()
+                }
+              NavigationLink {
+               TaskDetailView(taskItem: task)
+              } label: {
+                Text(task.title)
+              }
             }
             .swipeActions {
               Button("Delete", role: .destructive) {
