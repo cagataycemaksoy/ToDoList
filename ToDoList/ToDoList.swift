@@ -23,7 +23,11 @@ struct ToDoList: View {
             } label: {
               Text(task.title)
             }
-
+            .swipeActions {
+              Button("Delete", role: .destructive) {
+                modelContext.delete(task)
+              }
+            }
           }
         }
         .navigationTitle("To-Dos")
