@@ -26,7 +26,12 @@ struct ToDoList: View {
               NavigationLink {
                TaskDetailView(taskItem: task)
               } label: {
-                Text(task.title)
+                VStack(alignment: .leading) {
+                  Text(task.title)
+                  HStack {
+                    Text(task.remindingDate.formatted(date: .numeric, time: .shortened))
+                  }
+                }
               }
             }
             .swipeActions {
