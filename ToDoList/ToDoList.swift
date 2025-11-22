@@ -28,9 +28,12 @@ struct ToDoList: View {
               } label: {
                 VStack(alignment: .leading) {
                   Text(task.title)
+                    .font(.headline)
                   HStack {
+                    Image(systemName: "calendar")
                     Text(task.remindingDate.formatted(date: .numeric, time: .shortened))
                   }
+                  .font(.subheadline)
                 }
               }
             }
