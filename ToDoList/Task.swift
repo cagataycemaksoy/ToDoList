@@ -32,7 +32,7 @@ extension Task {
   static var preview: ModelContainer {
     let container = try! ModelContainer(for: Task.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
     container.mainContext.insert(Task(todoTitle: "Learn SwiftUI", taskDescription: "Exercise SwfitUI by building projects.", taskCompleted: true, remindTask: true, remindingDate: Date.now ))
-    container.mainContext.insert(Task(todoTitle: "Cook Dinner", taskDescription: "Invite friends and cook dinner.", taskCompleted: true, remindTask: true, remindingDate: Date.now + 24*60*60))
+    container.mainContext.insert(Task(todoTitle: "Cook Dinner", taskDescription: "Invite friends and cook dinner.", taskCompleted: false, remindTask: true, remindingDate: Date.now + 24*60*60))
     return container
   }
 }

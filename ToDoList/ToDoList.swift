@@ -60,4 +60,5 @@ struct ToDoList: View {
 
 #Preview {
     ToDoList()
+    .modelContainer(Task.preview)
 }
