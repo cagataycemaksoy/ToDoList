@@ -6,17 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		758C93122ED2771C0084DC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758C930C2ED2771C0084DC4D /* Assets.xcassets */; };
+		758C93132ED2771C0084DC4D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C930D2ED2771C0084DC4D /* Task.swift */; };
+		758C93142ED2771C0084DC4D /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C930E2ED2771C0084DC4D /* TaskDetailView.swift */; };
+		758C93152ED2771C0084DC4D /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C930F2ED2771C0084DC4D /* ToDoList.swift */; };
+		758C93162ED2771C0084DC4D /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93102ED2771C0084DC4D /* ToDoListApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7508CD1D2ECC831800165994 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		758C930C2ED2771C0084DC4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		758C930D2ED2771C0084DC4D /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		758C930E2ED2771C0084DC4D /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		758C930F2ED2771C0084DC4D /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		758C93102ED2771C0084DC4D /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7508CD1F2ECC831800165994 /* ToDoList */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDoList;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7508CD1A2ECC831800165994 /* Frameworks */ = {
@@ -32,7 +37,7 @@
 		7508CD142ECC831800165994 = {
 			isa = PBXGroup;
 			children = (
-				7508CD1F2ECC831800165994 /* ToDoList */,
+				758C93112ED2771C0084DC4D /* ToDoList */,
 				7508CD1E2ECC831800165994 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +48,34 @@
 				7508CD1D2ECC831800165994 /* ToDoList.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		758C93112ED2771C0084DC4D /* ToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				758C930C2ED2771C0084DC4D /* Assets.xcassets */,
+				758C93102ED2771C0084DC4D /* ToDoListApp.swift */,
+				758C93172ED2772F0084DC4D /* View */,
+				758C93182ED2775F0084DC4D /* Model */,
+			);
+			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		758C93172ED2772F0084DC4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				758C930F2ED2771C0084DC4D /* ToDoList.swift */,
+				758C930E2ED2771C0084DC4D /* TaskDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		758C93182ED2775F0084DC4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				758C930D2ED2771C0084DC4D /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +92,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				7508CD1F2ECC831800165994 /* ToDoList */,
 			);
 			name = ToDoList;
 			packageProductDependencies = (
@@ -109,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758C93122ED2771C0084DC4D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758C93132ED2771C0084DC4D /* Task.swift in Sources */,
+				758C93142ED2771C0084DC4D /* TaskDetailView.swift in Sources */,
+				758C93152ED2771C0084DC4D /* ToDoList.swift in Sources */,
+				758C93162ED2771C0084DC4D /* ToDoListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
