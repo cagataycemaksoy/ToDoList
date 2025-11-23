@@ -12,6 +12,8 @@
 		758C93142ED2771C0084DC4D /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C930E2ED2771C0084DC4D /* TaskDetailView.swift */; };
 		758C93152ED2771C0084DC4D /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C930F2ED2771C0084DC4D /* ToDoList.swift */; };
 		758C93162ED2771C0084DC4D /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93102ED2771C0084DC4D /* ToDoListApp.swift */; };
+		758C931A2ED3A1AA0084DC4D /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C93192ED3A1AA0084DC4D /* ListView.swift */; };
+		758C931E2ED3A4620084DC4D /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758C931D2ED3A4620084DC4D /* SortOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		758C930E2ED2771C0084DC4D /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		758C930F2ED2771C0084DC4D /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		758C93102ED2771C0084DC4D /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
+		758C93192ED3A1AA0084DC4D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		758C931D2ED3A4620084DC4D /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				758C930F2ED2771C0084DC4D /* ToDoList.swift */,
+				758C93192ED3A1AA0084DC4D /* ListView.swift */,
 				758C930E2ED2771C0084DC4D /* TaskDetailView.swift */,
 			);
 			path = View;
@@ -74,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				758C930D2ED2771C0084DC4D /* Task.swift */,
+				758C931D2ED3A4620084DC4D /* SortOption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				758C931E2ED3A4620084DC4D /* SortOption.swift in Sources */,
 				758C93132ED2771C0084DC4D /* Task.swift in Sources */,
 				758C93142ED2771C0084DC4D /* TaskDetailView.swift in Sources */,
+				758C931A2ED3A1AA0084DC4D /* ListView.swift in Sources */,
 				758C93152ED2771C0084DC4D /* ToDoList.swift in Sources */,
 				758C93162ED2771C0084DC4D /* ToDoListApp.swift in Sources */,
 			);

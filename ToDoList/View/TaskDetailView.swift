@@ -81,5 +81,6 @@ struct TaskDetailView: View {
 #Preview {
     NavigationStack {
       TaskDetailView(taskItem: Task())
+        .modelContainer(for: Task.self, inMemory: true )
     }
 }
