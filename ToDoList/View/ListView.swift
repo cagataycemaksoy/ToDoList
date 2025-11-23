@@ -43,11 +43,21 @@ struct ListView: View {
     }
   }
   
-  //init(sortOption: SortOption) {
-  
-  //}
+  init(sortOption: SortOption) {
+    switch sortOption {
+    case .alphabetical:
+      _tasks = Query(sort: \.title)
+    case .chronological:
+      _tasks = Query(sort: \.remindingDate)
+    case .notCompleted:
+      _tasks = Query(filter: #Predicate {$0.taskCompleted == false} )
+    }
+  }
 }
 
 #Preview {
-    ListView()
+  NavigationStack {
+    ListView(sortOption: .alphabetical)
+  }
+  .modelContainer(Task.preview)
 }

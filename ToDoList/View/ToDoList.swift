@@ -14,7 +14,7 @@ struct ToDoList: View {
   
     var body: some View {
       NavigationStack {
-       ListView()
+       ListView(sortOption: selectedSort)
         .navigationTitle("To-Dos")
         .navigationBarTitleDisplayMode(.automatic)
         .listStyle(.plain)
@@ -37,7 +37,7 @@ struct ToDoList: View {
                 Text($0.rawValue)
               }
             }
-            .pickerStyle(.inline)
+            .pickerStyle(.palette)
           }
         }
       }
